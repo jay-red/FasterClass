@@ -1,0 +1,115 @@
+/* learn.css */
+#learn-overlay-container {
+	position: absolute;
+	width: 50vw;
+	margin-left: -25vw;
+	margin-top: -40vh;
+	left: 50vw;
+	top: 50vh;
+	height: 80vh;
+	z-index: 9999;
+}
+
+#learn-overlay {
+	position: absolute;
+	top: -18px;
+	left: -20px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
+    padding: 18px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+#learn-header, #learn-footer, #learn-body, #demo-container, #code-container, #test-container, #code-content, #demo-content, #test-content, #code-editor, #demo-view, #test-view {
+	display: inline-block;
+}
+
+#learn-header, #learn-footer, #learn-body {
+	position: absolute;
+}
+
+#learn-header, #learn-footer {
+	background: #000000;
+}
+
+#learn-header {
+	top: 0px;
+	height: 50px;
+	width: 100%;
+}
+
+#learn-body{
+	top: 50px;
+	bottom: 0px;
+	width: 100%;
+}
+
+#learn-footer {
+	bottom: 0px;
+	height: 50px;
+	width: 100%;
+}
+
+#demo-container, #code-container, #test-container {
+	position: absolute;
+	background: #8F908A;
+}
+
+#code-container {
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+}
+
+#demo-container {
+	top: 0px;
+	right: 0px;
+	width: 50%;
+	height: 50%;
+}
+
+#test-container {
+	bottom: 0px;
+	right: 0px;
+	width: 50%;
+	height: 50%;
+}
+
+#code-editor {
+	height: 100%;
+	width: 100%;
+}
+
+#code-content, #demo-content, #test-content {
+	position: absolute;
+	background: #272822;
+}
+
+#code-content {
+	top: 0px;
+	right: 1px;
+	bottom: 0px;
+	left: 0px;
+}
+
+#demo-content {
+	top: 0px;
+	bottom: 1px;
+}
+
+#test-content {
+	top: 1px;
+	bottom: 0px;
+}
+
+#demo-content, #test-content {
+	left: 1px;
+	right: 0px;
+}
