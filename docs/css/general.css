@@ -7,29 +7,24 @@ html, body {
 	padding: 0px;
 }
 
-h1 {
+h1, h3, p {
 	font-family: Lato;
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
+}
+
+h1 {
 	font-weight: 700;
 	line-height: 26.4px;
 }
 
 h3 {
-	font-family: Lato;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
 	font-weight: 700;
 	line-height: 15.4px;
 }
 
 p {
-	font-family: Lato;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
 	font-weight: 400;
 	line-height: 20px;
 }
@@ -51,3 +46,30 @@ pre {
 	font-weight: 400;
 	line-height: 18.5714px;
 }
+
+.gridContainer {
+	display: grid;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.absPos {
+	position: absolute;
+}
+
+.relPos {
+	position: relative;
+}
+
+.inlineContainer {
+	display: inline;
+}
+
+
+
