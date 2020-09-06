@@ -18,6 +18,10 @@ html, body {
 	height: 400px;
 	margin-bottom: 40px;
 	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .lesson-card {
