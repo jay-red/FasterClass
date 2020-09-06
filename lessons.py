@@ -42,13 +42,14 @@ for root, subdirs, files in os.walk( lessons_dir ):
 					file[ "default" ] = "DEFAULT" in first
 				lesson[ "files" ][ priority ] = file
 
+print("")
+
 for lesson_name in json_lessons:
 	lesson_dir = os.path.join( lessons_dir, lesson_name )
 	lessons_file = os.path.join( lesson_dir, "lesson.json" )
 	desc_file = os.path.join( lesson_dir, "desc.txt" )
 	with open( desc_file, "r+" ) as f:
 		content = f.readlines()
-		print( content )
 		json_lessons[ lesson_name ][ "title" ] = " ".join( lesson_name.split( "-" ) )
 		json_lessons[ lesson_name ][ "desc" ] =  ""
 		if len( content ) >= 2:
@@ -56,6 +57,11 @@ for lesson_name in json_lessons:
 			json_lessons[ lesson_name ][ "desc" ] = content[ 1 ].strip()
 		else:
 			f.write( json_lessons[ lesson_name ][ "title" ] + "\nWrite something here!" )
+		print( "===================================" )
+		print( "Lesson Initialized\n" )
+		print( "Lesson Title:\n" + json_lessons[ lesson_name ][ "title" ] + "\n" )
+		print( "Description\n" + json_lessons[ lesson_name ][ "desc" ] + "\n" )
+		print( "===================================" )
 
 	files = []
 	for i in range( len( json_lessons[ lesson_name ][ "files" ] ) ):
