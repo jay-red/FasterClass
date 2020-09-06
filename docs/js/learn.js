@@ -1,24 +1,32 @@
 function init_learn( user ) {
-	var URL = window.location.href,
-		EDITOR_DIV = document.getElementById( "code-editor" ),
+	var EDITOR_DIV = document.getElementById( "code-editor" ),
 		BUTTON_SAVE = document.getElementById( "save-button" ),
-		BUTTON_RUN = document.getElementById( "run-button" );
-
-	var lesson = URL.split( "lesson=" );
-	if( lesson.length != 2 ) window.location.replace( "../lessons" );
-	lesson = lesson[ 1 ].toLowerCase();
+		BUTTON_RUN = document.getElementById( "run-button" )
+		DIV_IFRAME_DEMO = document.getElementById( "demo-iframe-div" ),
+		DIV_IFRAME_TEST = document.getElementById( "test-iframe-div" );
 
 	var name,
 		path,
+		lesson,
 		editor,
-		session;
+		session,
+		iframe_demo,
+		iframe_test;
 
 	function handle_button_save() {
 		firebase.database().ref( path ).set( session.toString() );
 	}
 
+	function callback_run( err ) {
+		if( err ) {
+
+		} else {
+			iframe_demo.setAttribute( "src", iframe_demo.getAttribute( "src" ) );
+		}
+	}
+
 	function handle_button_run() {
-		
+		firebase.database().ref( path ).set( session.toString(), callback_run );
 	}
 
 	function callback_code( snapshot ) {
@@ -32,38 +40,30 @@ function init_learn( user ) {
 		} else {
 			session.setValue( "hi" );
 		}
+		iframe_demo = document.createElement( "iframe" );
+		iframe_demo.setAttribute( "class", "iframe" );
+		iframe_demo.setAttribute( "frameborder", "0" );
+		iframe_demo.src = "../demo/?lesson=" + lesson + "&uid=" + user.uid;
+		DIV_IFRAME_DEMO.appendChild( iframe_demo );
+
+		iframe_test = document.createElement( "iframe" );
+		iframe_test.setAttribute( "class", "iframe-div" );
+		iframe_test.setAttribute( "frameborder", "0" );
+		iframe_test.src = "../tester/?lesson=" + lesson + "&uid=" + user.uid;
+		DIV_IFRAME_TEST.appendChild( iframe_test );
+
 		BUTTON_SAVE.addEventListener( "click", handle_button_save );
 		BUTTON_RUN.addEventListener( "click", handle_button_run );
 	}
 
-	function add_callback_xhr( xhr ) {
-		xhr.onreadystatechange = function() {
-			if( xhr.readyState == 4 && xhr.status == 200 ) {
-				var data = JSON.parse( xhr.responseText );
-				var files = data[ "files" ];
-				var file;
-				var clean_name;
-				for( var i = 0; i < files.length; ++i ) {
-					file = files[ i ];
-					if( file.user ) {
-						name = file.src;
-						clean_name = file.src.split( "/" );
-						clean_name = clean_name[ clean_name.length - 1 ];
-						path = "/code/" + user.uid + "/" + lesson + "/" + clean_name.replace( ".", "" );
-						firebase.database().ref( path ).once( "value" ).then( callback_code );
-						break;
-					}
-				}
-			}
-		}
+	function callback_lesson( evt ) {
+		name = evt.name;
+		path = evt.path;
+		lesson = evt.lesson;
+		firebase.database().ref( path ).once( "value" ).then( callback_code );
 	}
 
-	var xhr = new XMLHttpRequest();
-	add_callback_xhr( xhr );
-	xhr.open( "GET", "../lessons/" + lesson + "/lesson.json", true );
-	xhr.send();
-
-	//firebase.database().ref( "/code/" + user.uid ).once( "value" ).then( callback_user );
+	init_lesson( user.uid, callback_lesson );
 }
 
 function callback_secure( user ) {

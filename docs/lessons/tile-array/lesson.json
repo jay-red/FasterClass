@@ -1,6 +1,10 @@
 {
 	"files" : [
 		{
+			"user" : false,
+			"src" : "css/game.css"
+		},
+		{
 			"user" : true,
 			"src" : "js/world.js"
 		},

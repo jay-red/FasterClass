@@ -1,1 +1,6 @@
 /* demo.css */
+#content {
+	background: #272822;
+	width: 100%;
+	height: 100%;
+}

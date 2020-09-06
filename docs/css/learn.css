@@ -1,4 +1,12 @@
 /* learn.css */
+html, body {
+	font-family: Lato;
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
 h1, h3, p {
 	font-family: Lato;
 	font-size: 24px;
@@ -47,15 +55,25 @@ pre {
 	float: left;
 	text-align: center;
 	line-height: 50px;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
-	-moz-user-select: none;     /* Firefox all */
-	-ms-user-select: none;      /* IE 10+ */
-	user-select: none;  
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .header-button:hover { 
 	background: #101010;
 	cursor: pointer;
+}
+
+.iframe-div {
+	height: 100%;
+	width: 100%;
+}
+
+.iframe {
+	height: 100%;
+	width: 100%;
 }
 
 #run-text, #save-text {
