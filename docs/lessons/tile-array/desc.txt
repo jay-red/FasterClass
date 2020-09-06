@@ -1,2 +1,2 @@
 Using Arrays to Create Worlds
-blah blah
+Beautiful tile engines are powered by the simplest data structure: arrays. 

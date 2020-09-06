@@ -1,5 +1,10 @@
 /* landing.css */
 
+a, a:link, a:hover, a:visited, a:active {
+	color:inherit;
+	text-decoration: none;
+}
+
 #landing {
 	width: 100vw;
 	height: 100vh;
@@ -34,6 +39,8 @@
 /*	width: 50%;
 */	font-size: .75em;
     letter-spacing: .15em;
+    position: relative;
+    z-index: 9999;
 }
 
 .startButton {

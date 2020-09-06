@@ -1,0 +1,2 @@
+Multiplayer, but No Servers
+...wait what? Take a look at WebRTC & Firebase, and how they can be powerful tools in creating cheap multiplayer experiences

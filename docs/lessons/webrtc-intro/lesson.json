@@ -1,0 +1,1 @@
+{"files": [{"src": "css/game.css", "ext": null, "user": false}, {"src": "js/default.js", "ext": null, "user": true, "default": true}, {"src": "js/main.js", "ext": null, "user": false}], "title": "Multiplayer, but No Servers", "desc": "...wait what? Take a look at WebRTC & Firebase, and how they can be powerful tools in creating cheap multiplayer experiences"}

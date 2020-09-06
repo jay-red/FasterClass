@@ -1,1 +1,1 @@
-{"files": [{"src": "css/game.css", "ext": null, "user": false}, {"src": "js/controls.js", "ext": null, "user": true, "default": true}, {"src": "js/display.js", "ext": null, "user": false}], "title": "Basic Keyboard Controls", "desc": "blah blah"}
+{"files": [{"src": "css/game.css", "ext": null, "user": false}, {"src": "js/controls.js", "ext": null, "user": true, "default": true}, {"src": "js/display.js", "ext": null, "user": false}], "title": "Basic Keyboard Controls", "desc": "Gaming keyboards are given out at every hackathon. Learn to integrate it."}

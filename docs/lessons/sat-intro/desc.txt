@@ -1,0 +1,2 @@
+The SAT and Interacting Objects
+The SAT. No, not that one. The Separating Axis Theorem. See how projections & vectors play a major role in games today.

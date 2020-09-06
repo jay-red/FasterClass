@@ -70,8 +70,7 @@ a, a:link, a:hover, a:visited, a:active {
 #nav-bar {
 	width: 90vw;
 	height: 64px;
-	padding: 0 64px;
-	margin: 0 auto;
+	margin: 0 64px;
 }
 
 #nav-bar div a {
