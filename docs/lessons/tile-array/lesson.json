@@ -1,0 +1,12 @@
+{
+	"files" : [
+		{
+			"user" : true,
+			"src" : "js/world.js"
+		},
+		{
+			"user" : false,
+			"src" : "js/render.js"
+		}
+	]
+}

@@ -1,4 +1,67 @@
 /* learn.css */
+h1, h3, p {
+	font-family: Lato;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+}
+
+h1 {
+	font-weight: 700;
+	line-height: 26.4px;
+}
+
+h3 {
+	font-weight: 700;
+	line-height: 15.4px;
+}
+
+p {
+	font-weight: 400;
+	line-height: 20px;
+}
+
+blockquote {
+	font-family: Lato;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+
+pre {
+	font-family: Lato;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+
+.header-button {
+	display: block;
+	height: 50px;
+	width: 75px;
+	color: white;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;  
+}
+
+.header-button:hover { 
+	background: #101010;
+	cursor: pointer;
+}
+
+#run-text, #save-text {
+	display: inline-block;
+}
+
 #learn-overlay-container {
 	position: absolute;
 	width: 50vw;

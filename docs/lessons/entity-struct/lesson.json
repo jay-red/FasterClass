@@ -1,0 +1,16 @@
+{
+	"files" : [
+		{
+			"user" : false,
+			"src" : "js/render.js"
+		},
+		{
+			"user" : false,
+			"src" : "js/render.js"
+		},
+		{
+			"user" : false,
+			"src" : "js/game.js"
+		}
+	]
+}
