@@ -1,1 +1,55 @@
 /* lessons.css */
+
+html, body {
+	background-color: black;
+	color: white;
+}
+
+.lesson-item {
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0);
+	border-radius: 15px;
+	overflow: hidden;
+	width: 300px;
+	height: 400px;
+	padding: 16px;
+	cursor: pointer;
+}
+
+.lesson-thumbnail {
+	min-width: 100%;
+	max-height: 100%;
+}
+
+.thumbnail-container {
+	overflow: hidden;
+	border-radius: 15px;
+	height: 66.66%;
+}
+
+.lesson-item h2 {
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	margin: 0;
+	padding: 16px 8px;
+}
+
+.lesson-item p {
+	font-size: .9em;
+	opacity: .6;
+	letter-spacing: .15em;
+	margin: 0;
+	padding: 0px 8px 16px 8px;
+}
+
+.lesson-item:hover {
+	animation-name: show-border;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+
+@keyframes show-border{
+	from {border-color: rgba(255, 255, 255, 0);}
+	to {border-color: rgba(255, 255, 255, .8);}
+}
