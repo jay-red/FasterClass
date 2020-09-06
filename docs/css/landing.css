@@ -6,8 +6,8 @@
 	background-color: black;
 	color: white;
 	overflow: hidden;
-/*	grid-template-rows: 64px auto 64px;
-*/	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 64px max-content auto;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: 
 		"header header header"
 		"left vid vid"
@@ -24,7 +24,6 @@
 
 #navBar div a {
 	display: block;
-	cursor: pointer;
 }
 
 #sponsorBar {
@@ -48,7 +47,6 @@
 	color: white;
 	margin: 0;
 	padding: 17px 20px;
-	cursor: pointer;
 	font-weight: 700;
 }
 
@@ -76,8 +74,7 @@
 }
 
 .leftText h3 {
-/*	width: 50%;
-*/	opacity: .8;
+	opacity: .8;
 	font-weight: 700;
 	letter-spacing: .01em;
 	display: block;
@@ -94,7 +91,9 @@
 .vidContainer {
 	grid-area: vid;
 	width: 100%;
-}
+	height: 37.5vw;
+/*	padding: 16px;
+*/}
 
 .vidPlayer {
 	width: 100%;
@@ -115,3 +114,6 @@
     padding: 24px 0px 24px 16px;
 }
 
+a {
+	cursor: pointer;
+}
