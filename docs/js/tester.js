@@ -38,7 +38,7 @@ function init_tester() {
 	}
 
 	function callback_load_tag() {
-		write_line( "Loading tester...\n\n\n\n\n\n\n\n" );
+		write_line( "Loading tester...\n" );
 		var tag = document.createElement( "script" );
 		tag.setAttribute( "type", "text/javascript" );
 		tag.setAttribute( "src", int_code + "tests.js" );

@@ -5,6 +5,10 @@ html, body {
 	color: white;
 }
 
+#lesson-showcase {
+	margin: auto;
+}
+
 .lesson-item {
 	border-style: solid;
 	border-color: rgba(255, 255, 255, 0);
@@ -12,7 +16,16 @@ html, body {
 	overflow: hidden;
 	width: 300px;
 	height: 400px;
-	padding: 16px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+
+.lesson-card {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	right: 16px;
+	bottom: 16px;
 	cursor: pointer;
 }
 
@@ -27,14 +40,14 @@ html, body {
 	height: 66.66%;
 }
 
-.lesson-item h2 {
+.lesson-card h2 {
 	text-transform: uppercase;
 	letter-spacing: .15em;
 	margin: 0;
 	padding: 16px 8px;
 }
 
-.lesson-item p {
+.lesson-card p {
 	font-size: .9em;
 	opacity: .6;
 	letter-spacing: .15em;

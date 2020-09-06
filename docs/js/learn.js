@@ -22,6 +22,7 @@ function init_learn( user ) {
 
 		} else {
 			iframe_demo.setAttribute( "src", iframe_demo.getAttribute( "src" ) );
+			iframe_test.setAttribute( "src", iframe_test.getAttribute( "src" ) );
 		}
 	}
 
