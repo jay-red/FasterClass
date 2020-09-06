@@ -1,16 +1,1 @@
-{
-	"files" : [
-		{
-			"user" : false,
-			"src" : "css/game.css"
-		},
-		{
-			"user" : true,
-			"src" : "js/world.js"
-		},
-		{
-			"user" : false,
-			"src" : "js/render.js"
-		}
-	]
-}
+{"files": [{"src": "css/game.css", "ext": null, "user": false}, {"src": "js/world.js", "ext": null, "user": true, "default": true}, {"src": "js/render.js", "ext": null, "user": false}], "title": "Using Arrays to Create Worlds", "desc": "blah blah"}

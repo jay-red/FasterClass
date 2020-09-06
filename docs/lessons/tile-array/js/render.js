@@ -1,3 +1,4 @@
+/* 2 */
 function init_render() {
 	var DIV_CONTENT = document.getElementById( "content" );
 

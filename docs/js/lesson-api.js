@@ -26,6 +26,7 @@ function init_lesson( uid, cb_lesson ) {
 					}
 				}
 				var evt = {};
+				evt[ "data" ] = data;
 				evt[ "files" ] = files;
 				evt[ "name" ] = name;
 				evt[ "path" ] = path;
