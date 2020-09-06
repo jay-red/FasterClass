@@ -15,12 +15,14 @@ function init_lesson( uid, cb_lesson ) {
 				var name;
 				var path;
 				var clean_name;
+				var def = false;
 				for( var i = 0; i < files.length; ++i ) {
 					file = files[ i ];
 					if( file.user ) {
 						name = file.src;
 						clean_name = file.src.split( "/" );
 						clean_name = clean_name[ clean_name.length - 1 ];
+						def = file.default;
 						path = "/code/" + uid + "/" + lesson + "/" + clean_name.replace( ".", "" );
 						break;
 					}
@@ -29,6 +31,7 @@ function init_lesson( uid, cb_lesson ) {
 				evt[ "data" ] = data;
 				evt[ "files" ] = files;
 				evt[ "name" ] = name;
+				evt[ "default" ] = def;
 				evt[ "path" ] = path;
 				evt[ "lesson" ] = lesson;
 				cb_lesson( evt );

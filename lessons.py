@@ -64,8 +64,6 @@ for lesson_name in json_lessons:
 	with open( lessons_file, "w" ) as f:
 		f.write( dumps( json_lessons[ lesson_name ] ) )
 
-			#with open(file_path, 'rb') as f:
-			#	f_content = f.read()
-			#	list_file.write(('The file %s contains:\n' % filename).encode('utf-8'))
-			#	list_file.write(f_content)
-			#	list_file.write(b'\n')
+lessons_file = os.path.join( lessons_dir, "lessons.json" )
+with open( lessons_file, "w" ) as f:
+	f.write( dumps( json_lessons ) )

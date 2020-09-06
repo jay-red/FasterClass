@@ -11,7 +11,8 @@ function init_learn( user ) {
 		editor,
 		session,
 		iframe_demo,
-		iframe_test;
+		iframe_test,
+		def;
 
 	function handle_button_save() {
 		firebase.database().ref( path ).set( session.toString() );
@@ -30,6 +31,16 @@ function init_learn( user ) {
 		firebase.database().ref( path ).set( session.toString(), callback_run );
 	}
 
+	function add_callback_xhr( xhr ) {
+		xhr.onreadystatechange = function() {
+			if( xhr.readyState == 4 && xhr.status == 200 ) {
+				var lines = xhr.responseText.split( "\n" );
+				lines[ 0 ] = "// Write something cool!";
+				session.setValue( lines.join( "\n" ) );
+			}
+		}
+	}
+
 	function callback_code( snapshot ) {
 		editor = ace.edit( "code-editor" );
 		editor.setTheme( "ace/theme/monokai" );
@@ -39,7 +50,14 @@ function init_learn( user ) {
 		if( snapshot.exists() ) {
 			session.setValue( snapshot.val() );
 		} else {
-			session.setValue( "hi" );
+			if( def ) {
+				var xhr = new XMLHttpRequest();
+				add_callback_xhr( xhr );
+				xhr.open( "GET", "../lessons/" + lesson + "/" + name, true );
+				xhr.send();
+			} else {
+				session.setValue( "// Write something cool!" );
+			}
 		}
 		iframe_demo = document.createElement( "iframe" );
 		iframe_demo.setAttribute( "class", "iframe" );
@@ -61,6 +79,7 @@ function init_learn( user ) {
 		name = evt.name;
 		path = evt.path;
 		lesson = evt.lesson;
+		def = evt.default;
 		firebase.database().ref( path ).once( "value" ).then( callback_code );
 	}
 

@@ -5,6 +5,11 @@ html, body {
 	color: white;
 }
 
+a, a:link, a:hover, a:visited, a:active {
+	color:inherit;
+	text-decoration: none;
+}
+
 #lesson-showcase {
 	margin: auto;
 }
@@ -42,6 +47,8 @@ html, body {
 	overflow: hidden;
 	border-radius: 15px;
 	height: 66.66%;
+	background-size: cover;
+	background-position: center;
 }
 
 .lesson-card h2 {
